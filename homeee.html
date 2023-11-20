@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MY ML MODEL</title>
+</head>
+<body>
+    <h1>ML Calculator</h1>
+
+    <form action="{{ url_for('home') }}" method="POST">
+
+      <label for="age">Enter value 1:</label>
+      <input type="text" name="age" required>
+
+      <label for="sex">Enter value 2:</label>
+      <input type="text" name="sex" required>
+
+      <label for="bmi">Enter value 3:</label>
+      <input type="text" name="bmi" required>
+
+      <label for="children">Enter value 4:</label>
+      <input type="text" name="children" required>
+
+      <label for="smoker">Enter value 5:</label>
+      <input type="text" name="smoker" required>
+
+      <label for="region">Enter value 6:</label>
+      <input type="text" name="region" required>
+
+        <button type="submit">Predict</button>
+    </form>
+
+    {% if result %}
+        <div>ML Prediction Result: {{ result }}</div>
+    {% endif %}
+</body>
+</html>
